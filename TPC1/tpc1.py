@@ -1,46 +1,23 @@
-#!/usr/bin/env python
-'''
-Repetidas - Remove linhas repetidas de um programa.
-
-Usage -
-    repetidas options file*
-
-Options -
-    -s      keep spaces 
-    -e      remove duplicated empty lines
-    -p "#"  adds prefix to the left side of duplicated lines
-'''
-
-from jjcli import *
-
 def main():
-    cl = clfilter(opt="sep:", man=__doc__)
-
+    
     different_lines = set()
     result = ""
-
-    for line in cl.input():
-        stripped_line = line.rstrip("\n")
-
-        if "-s" in cl.opt: 
-            ln = stripped_line
-        else:
-            ln = stripped_line.strip() # remover espaços à frente e atrás
-        
-        if ln in different_lines:
-            # Adicionar prefixo se -p estiver presente
-            if "-p" in cl.opt:
-                prefix = cl.opt["-p"]
-                result += prefix + ln + "\n"
+    
+    filename = input("Indique o nome do ficheiro:")
+    
+    f = open(filename, "r")
+    
+    for line in f:
+        if line not in different_lines:
+            different_lines.add(line)
+            result += line
             
-            if not ln and "-e" not in cl.opt: # manter duplicated empty lines
-                result += ln + "\n"
-                
-        else:
-            different_lines.add(ln)
-            result += ln + "\n"
-            
+    f.close()
+    
     print(result)
+    
+    return 0
 
 if __name__ == "__main__":
     main()
+    

@@ -1,23 +1,7 @@
-## TPC1:
+## TPC0 
 
-### 2025-02-11
+Utilização de Filtro em Python para eliminar linhas repetidas de um ficheiro.
 
-## Resumo
-Continuação do TPC0 com adição de linhas de comando. 
-Utilização da biblioteca jjcli.
+### Resoolução
+Não foi utilizado o filtro. Criou-se um _set_ que contém cada linha do texto de entrada, e assim, verificava-se a existência de linhas repetidas.
 
-    -s          keep spaces
-    -e          remove duplicated empty lines
-    -p "#"      prefixo, às linhas repetidas adicionar um cardinal
-
-### Execução
-```
-chmod +x tpc1.py
-./tpc1.py -s exemplo.txt
-./tpc1.py -e exemplo.txt
-./tpc1.py -p "Olé" exemplo.txt
-./tpc1.py -s -e -p "$" exemplo.txt
-```
-
-## Resolução
-Adaptação do exemplo da aula.
