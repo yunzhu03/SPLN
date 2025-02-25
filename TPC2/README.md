@@ -3,7 +3,7 @@
 ### 2025-02-11
 
 ## Resumo
-Continuação do TPC0 com adição de linhas de comando. 
+Continuação do TPC1 com adição de linhas de comando. 
 Utilização da biblioteca jjcli.
 
     -s          keep spaces
