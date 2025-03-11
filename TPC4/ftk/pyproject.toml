@@ -1,0 +1,10 @@
+[project]
+name="ftk"
+version="0.1.0"
+authors=[{name="Yun", email="y.z.yunzhu@gmail.com"}]
+dependencies=["jjcli"]
+description=""" Pode-se colocar uma descrição. """
+license={text="MTI?"}
+
+[project.scripts]
+ftk-occ="ftk.base:main"

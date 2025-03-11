@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: ftk
+Version: 0.1.0
+Summary:  Pode-se colocar uma descrição. 
+Author-email: Yun <y.z.yunzhu@gmail.com>
+License: MTI?
+Requires-Dist: jjcli
